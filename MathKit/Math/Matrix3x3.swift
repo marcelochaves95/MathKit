@@ -19,8 +19,6 @@ public struct Matrix3x3 {
     public var m33: Scalar
 }
 
-// MARK: Matrix3x3
-
 extension Matrix3x3: Hashable {
     public var hashValue: Int {
         var hash = m11.hashValue &+ m12.hashValue &+ m13.hashValue
@@ -36,15 +34,15 @@ public extension Matrix3x3 {
     public init(_ m11: Scalar, _ m12: Scalar, _ m13: Scalar,
                 _ m21: Scalar, _ m22: Scalar, _ m23: Scalar,
                 _ m31: Scalar, _ m32: Scalar, _ m33: Scalar) {
-        self.m11 = m11 // 0
-        self.m12 = m12 // 1
-        self.m13 = m13 // 2
-        self.m21 = m21 // 3
-        self.m22 = m22 // 4
-        self.m23 = m23 // 5
-        self.m31 = m31 // 6
-        self.m32 = m32 // 7
-        self.m33 = m33 // 8
+        self.m11 = m11
+        self.m12 = m12
+        self.m13 = m13
+        self.m21 = m21
+        self.m22 = m22
+        self.m23 = m23
+        self.m31 = m31
+        self.m32 = m32
+        self.m33 = m33
     }
     
     public init(scale: Vector2) {

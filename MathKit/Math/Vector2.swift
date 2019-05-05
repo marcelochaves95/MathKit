@@ -8,14 +8,10 @@
 
 import Foundation
 
-// MARK: Types
-
 public struct Vector2 {
     public var x: Scalar
     public var y: Scalar
 }
-
-// MARK: Vector2
 
 extension Vector2: Hashable {
     public var hashValue: Int {

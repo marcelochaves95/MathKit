@@ -8,11 +8,7 @@
 
 import Foundation
 
-// MARK: Types
-
 public typealias Scalar = Float
-
-// MARK: Scalar
 
 public extension Scalar {
     public static let halfPi = pi / 2
