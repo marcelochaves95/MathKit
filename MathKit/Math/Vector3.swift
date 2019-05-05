@@ -91,7 +91,7 @@ public extension Vector3 {
     
     public func normalized() -> Vector3 {
         let lengthSquared = self.lengthSquared
-        if lengthSquared ~= 0 || lengthSquared ~= 1 {
+        if lengthSquared != 0 || lengthSquared != 1 {
             return self
         }
         return self / sqrt(lengthSquared)
@@ -156,7 +156,7 @@ public extension Vector3 {
         return lhs.x.isEqual(to: rhs.x) && lhs.y.isEqual(to: rhs.y) && lhs.z.isEqual(to: rhs.z)
     }
     
-    public static func ~= (lhs: Vector3, rhs: Vector3) -> Bool {
+    public static func != (lhs: Vector3, rhs: Vector3) -> Bool {
         return !lhs.x.isEqual(to: rhs.x) && !lhs.y.isEqual(to: rhs.y) && !lhs.z.isEqual(to: rhs.z)
     }
 }

@@ -99,7 +99,7 @@ public extension Vector4 {
     }
     
     public func toVector3() -> Vector3 {
-        if w ~= 0 {
+        if w != 0 {
             return xyz
         } else {
             return xyz / w
@@ -112,7 +112,7 @@ public extension Vector4 {
     
     public func normalized() -> Vector4 {
         let lengthSquared = self.lengthSquared
-        if lengthSquared ~= 0 || lengthSquared ~= 1 {
+        if lengthSquared != 0 || lengthSquared != 1 {
             return self
         }
         return self / sqrt(lengthSquared)

@@ -59,7 +59,7 @@ public extension Vector2 {
     
     public func normalized() -> Vector2 {
         let lengthSquared = self.lengthSquared
-        if lengthSquared ~= 0 || lengthSquared ~= 1 {
+        if lengthSquared != 0 || lengthSquared != 1 {
             return self
         }
         return self / sqrt(lengthSquared)
