@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		46520680227E6C3500FB7104 /* Vector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4652067F227E6C3500FB7104 /* Vector2.swift */; };
 		46520682227E6CF900FB7104 /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46520681227E6CF900FB7104 /* Scalar.swift */; };
+		46520685227E72A500FB7104 /* Matrix3x3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46520684227E72A500FB7104 /* Matrix3x3.swift */; };
 		FC07F6A7227C79BC00799A49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07F6A6227C79BC00799A49 /* AppDelegate.swift */; };
 		FC07F6A9227C79BC00799A49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC07F6A8227C79BC00799A49 /* ViewController.swift */; };
 		FC07F6AC227C79BC00799A49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC07F6AA227C79BC00799A49 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		4652067F227E6C3500FB7104 /* Vector2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector2.swift; sourceTree = "<group>"; };
 		46520681227E6CF900FB7104 /* Scalar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scalar.swift; sourceTree = "<group>"; };
+		46520684227E72A500FB7104 /* Matrix3x3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix3x3.swift; sourceTree = "<group>"; };
 		FC07F6A3227C79BC00799A49 /* MathKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC07F6A6227C79BC00799A49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC07F6A8227C79BC00799A49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 			children = (
 				4652067F227E6C3500FB7104 /* Vector2.swift */,
 				46520681227E6CF900FB7104 /* Scalar.swift */,
+				46520684227E72A500FB7104 /* Matrix3x3.swift */,
 			);
 			path = Math;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				46520682227E6CF900FB7104 /* Scalar.swift in Sources */,
 				46520680227E6C3500FB7104 /* Vector2.swift in Sources */,
 				FC07F6A7227C79BC00799A49 /* AppDelegate.swift in Sources */,
+				46520685227E72A500FB7104 /* Matrix3x3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

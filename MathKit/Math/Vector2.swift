@@ -116,7 +116,7 @@ public extension Vector2 {
         return Vector2(lhs.x * rhs, lhs.y * rhs)
     }
     
-    public static func * (lhs: Vector2, rhs: Matrix3) -> Vector2 {
+    public static func * (lhs: Vector2, rhs: Matrix3x3) -> Vector2 {
         return Vector2(
             lhs.x * rhs.m11 + lhs.y * rhs.m21 + rhs.m31,
             lhs.x * rhs.m12 + lhs.y * rhs.m22 + rhs.m32
