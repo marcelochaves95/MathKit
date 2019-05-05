@@ -22,7 +22,7 @@ public extension Scalar {
     public static let radiansPerDegree = pi / 180
     public static let epsilon: Scalar = 0.0001
     
-    public static func ~= (lhs: Scalar, rhs: Scalar) -> Bool {
+    public static func != (lhs: Scalar, rhs: Scalar) -> Bool {
         return Swift.abs(lhs - rhs) < .epsilon
     }
     

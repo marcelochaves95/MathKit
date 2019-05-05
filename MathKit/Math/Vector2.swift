@@ -96,16 +96,16 @@ public extension Vector2 {
         return self + (v - self) * t
     }
     
-    public static prefix func - (v: Vector2) -> Vector2 {
-        return Vector2(-v.x, -v.y)
-    }
-    
     public static func + (lhs: Vector2, rhs: Vector2) -> Vector2 {
         return Vector2(lhs.x + rhs.x, lhs.y + rhs.y)
     }
     
     public static func - (lhs: Vector2, rhs: Vector2) -> Vector2 {
         return Vector2(lhs.x - rhs.x, lhs.y - rhs.y)
+    }
+    
+    public static prefix func - (v: Vector2) -> Vector2 {
+        return Vector2(-v.x, -v.y)
     }
     
     public static func * (lhs: Vector2, rhs: Vector2) -> Vector2 {
@@ -132,10 +132,10 @@ public extension Vector2 {
     }
     
     public static func == (lhs: Vector2, rhs: Vector2) -> Bool {
-        return lhs.x == rhs.x && lhs.y == rhs.y
+        return lhs.x.isEqual(to: lhs.x) && lhs.y.isEqual(to: rhs.y)
     }
     
-    public static func ~= (lhs: Vector2, rhs: Vector2) -> Bool {
-        return lhs.x ~= rhs.x && lhs.y ~= rhs.y
+    public static func != (lhs: Vector2, rhs: Vector2) -> Bool {
+        return !lhs.x.isEqual(to: rhs.x) && !lhs.y.isEqual(to: rhs.y)
     }
 }
