@@ -30,7 +30,7 @@ public extension SCNVector4 {
     }
 }
 
-#if os(iOS) // SCNMatrix4 = CATransform3D on Mac
+#if os(iOS) // SCNMatrix4 = CATransform3D on macOS
 
 public extension SCNMatrix4 {
     init(_ m: Matrix4x4) {
