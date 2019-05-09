@@ -98,16 +98,24 @@
 		FC07F6A5227C79BC00799A49 /* MathKit */ = {
 			isa = PBXGroup;
 			children = (
+				FC09FB5F2284746800E8F877 /* Core */,
 				FC051A702281BB2300AFE722 /* Extensions */,
 				46520683227E6D8A00FB7104 /* Math */,
-				FC07F6A6227C79BC00799A49 /* AppDelegate.swift */,
-				FC07F6A8227C79BC00799A49 /* ViewController.swift */,
-				FC07F6AA227C79BC00799A49 /* Main.storyboard */,
-				FC07F6AD227C79BE00799A49 /* Assets.xcassets */,
-				FC07F6AF227C79BE00799A49 /* LaunchScreen.storyboard */,
-				FC07F6B2227C79BE00799A49 /* Info.plist */,
 			);
 			path = MathKit;
+			sourceTree = "<group>";
+		};
+		FC09FB5F2284746800E8F877 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FC07F6AD227C79BE00799A49 /* Assets.xcassets */,
+				FC07F6A6227C79BC00799A49 /* AppDelegate.swift */,
+				FC07F6B2227C79BE00799A49 /* Info.plist */,
+				FC07F6AF227C79BE00799A49 /* LaunchScreen.storyboard */,
+				FC07F6AA227C79BC00799A49 /* Main.storyboard */,
+				FC07F6A8227C79BC00799A49 /* ViewController.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
