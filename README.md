@@ -12,9 +12,9 @@
 - - [x] Vector2
 - - [x] Vector3
 - - [x] Vector4
-- - [ ] MapKit
-- - [ ] Quartz
-- - [ ] SceneKit
+- - [x] MapKit
+- - [x] Quartz
+- - [x] SceneKit
 - - [ ] Tests
 
 ## License
