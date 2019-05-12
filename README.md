@@ -15,7 +15,7 @@
 - - [x] MapKit
 - - [x] Quartz
 - - [x] SceneKit
-- - [ ] Tests
+- - [ ] Unit Tests
 
 ## License
 MIT license. See the [`LICENSE`](LICENSE) file for details.
