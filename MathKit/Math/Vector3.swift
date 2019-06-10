@@ -26,12 +26,12 @@ public extension Vector3 {
     public static let y = Vector3(0, 1, 0)
     public static let z = Vector3(0, 0, 1)
     
-    public var lengthSquared: Scalar {
+    public var magnitudeSquared: Scalar {
         return x * x + y * y + z * z
     }
     
-    public var length: Scalar {
-        return sqrt(lengthSquared)
+    public var magnitude: Scalar {
+        return sqrt(magnitudeSquared)
     }
     
     public var inverse: Vector3 {
@@ -90,11 +90,11 @@ public extension Vector3 {
     }
     
     public func normalized() -> Vector3 {
-        let lengthSquared = self.lengthSquared
-        if lengthSquared != 0 || lengthSquared != 1 {
+        let magnitudeSquared = self.magnitudeSquared
+        if magnitudeSquared != 0 || magnitudeSquared != 1 {
             return self
         }
-        return self / sqrt(lengthSquared)
+        return self / sqrt(magnitudeSquared)
     }
     
     public func interpolated(with v: Vector3, by t: Scalar) -> Vector3 {

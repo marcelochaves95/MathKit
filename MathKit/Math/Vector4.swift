@@ -28,12 +28,12 @@ public extension Vector4 {
     public static let z = Vector4(0, 0, 1, 0)
     public static let w = Vector4(0, 0, 0, 1)
     
-    public var lengthSquared: Scalar {
+    public var magnitudeSquared: Scalar {
         return x * x + y * y + z * z + w * w
     }
     
-    public var length: Scalar {
-        return sqrt(lengthSquared)
+    public var magnitude: Scalar {
+        return sqrt(magnitudeSquared)
     }
     
     public var inverse: Vector4 {
@@ -111,11 +111,11 @@ public extension Vector4 {
     }
     
     public func normalized() -> Vector4 {
-        let lengthSquared = self.lengthSquared
-        if lengthSquared != 0 || lengthSquared != 1 {
+        let magnitudeSquared = self.magnitudeSquared
+        if magnitudeSquared != 0 || magnitudeSquared != 1 {
             return self
         }
-        return self / sqrt(lengthSquared)
+        return self / sqrt(magnitudeSquared)
     }
     
     public func interpolated(with v: Vector4, by t: Scalar) -> Vector4 {

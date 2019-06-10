@@ -69,14 +69,14 @@
 			path = Math;
 			sourceTree = "<group>";
 		};
-		FC051A702281BB2300AFE722 /* Extensions */ = {
+		FC051A702281BB2300AFE722 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				FC051A6E2281B9E700AFE722 /* MathKit+SceneKit.swift */,
 				FC051A712281BB5400AFE722 /* MathKit+QuartzCore.swift */,
 				FC051A732281BD3900AFE722 /* MathKit+MapKit.swift */,
 			);
-			path = Extensions;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FC07F69A227C79BC00799A49 = {
@@ -99,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				FC09FB5F2284746800E8F877 /* Core */,
-				FC051A702281BB2300AFE722 /* Extensions */,
+				FC051A702281BB2300AFE722 /* Extension */,
 				46520683227E6D8A00FB7104 /* Math */,
 			);
 			path = MathKit;

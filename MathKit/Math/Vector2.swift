@@ -24,12 +24,12 @@ public extension Vector2 {
     public static let x = Vector2(1, 0)
     public static let y = Vector2(0, 1)
     
-    public var lengthSquared: Scalar {
+    public var magnitudeSquared: Scalar {
         return x * x + y * y
     }
     
-    public var length: Scalar {
-        return sqrt(lengthSquared)
+    public var magnitude: Scalar {
+        return sqrt(magnitudeSquared)
     }
     
     public var inverse: Vector2 {
@@ -58,11 +58,11 @@ public extension Vector2 {
     }
     
     public func normalized() -> Vector2 {
-        let lengthSquared = self.lengthSquared
-        if lengthSquared != 0 || lengthSquared != 1 {
+        let magnitudeSquared = self.magnitudeSquared
+        if magnitudeSquared != 0 || magnitudeSquared != 1 {
             return self
         }
-        return self / sqrt(lengthSquared)
+        return self / sqrt(magnitudeSquared)
     }
     
     public func rotated(by radians: Scalar) -> Vector2 {
