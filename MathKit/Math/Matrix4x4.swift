@@ -253,7 +253,7 @@ public extension Matrix4x4 {
         return m.inverse
     }
     
-    public static func * (lhs: Matrix4x4, rhs: Matrix4x4) -> Matrix4x4 {
+    public static func *(lhs: Matrix4x4, rhs: Matrix4x4) -> Matrix4x4 {
         var m = Matrix4x4.identity
         
         m.m11 = lhs.m11 * rhs.m11 + lhs.m21 * rhs.m12
@@ -307,15 +307,15 @@ public extension Matrix4x4 {
         return m
     }
     
-    public static func * (lhs: Matrix4x4, rhs: Vector3) -> Vector3 {
+    public static func *(lhs: Matrix4x4, rhs: Vector3) -> Vector3 {
         return rhs * lhs
     }
     
-    public static func * (lhs: Matrix4x4, rhs: Vector4) -> Vector4 {
+    public static func *(lhs: Matrix4x4, rhs: Vector4) -> Vector4 {
         return rhs * lhs
     }
     
-    public static func * (lhs: Matrix4x4, rhs: Scalar) -> Matrix4x4 {
+    public static func *(lhs: Matrix4x4, rhs: Scalar) -> Matrix4x4 {
         return Matrix4x4(
             lhs.m11 * rhs, lhs.m12 * rhs, lhs.m13 * rhs, lhs.m14 * rhs,
             lhs.m21 * rhs, lhs.m22 * rhs, lhs.m23 * rhs, lhs.m24 * rhs,
@@ -324,7 +324,7 @@ public extension Matrix4x4 {
         )
     }
     
-    public static func == (lhs: Matrix4x4, rhs: Matrix4x4) -> Bool {
+    public static func ==(lhs: Matrix4x4, rhs: Matrix4x4) -> Bool {
         if !lhs.m11.isEqual(to: rhs.m11) { return false }
         if !lhs.m12.isEqual(to: rhs.m12) { return false }
         if !lhs.m13.isEqual(to: rhs.m13) { return false }
@@ -344,7 +344,7 @@ public extension Matrix4x4 {
         return true
     }
     
-    public static func != (lhs: Matrix4x4, rhs: Matrix4x4) -> Bool {
+    public static func !=(lhs: Matrix4x4, rhs: Matrix4x4) -> Bool {
         if lhs.m11.isEqual(to: rhs.m11) { return false }
         if lhs.m12.isEqual(to: rhs.m12) { return false }
         if lhs.m13.isEqual(to: rhs.m13) { return false }

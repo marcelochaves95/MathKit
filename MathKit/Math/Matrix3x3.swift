@@ -121,11 +121,11 @@ public extension Matrix3x3 {
         )
     }
     
-    public static prefix func - (m: Matrix3x3) -> Matrix3x3 {
+    public static prefix func -(m: Matrix3x3) -> Matrix3x3 {
         return m.inverse
     }
     
-    public static func * (lhs: Matrix3x3, rhs: Matrix3x3) -> Matrix3x3 {
+    public static func *(lhs: Matrix3x3, rhs: Matrix3x3) -> Matrix3x3 {
         return Matrix3x3(
             lhs.m11 * rhs.m11 + lhs.m21 * rhs.m12 + lhs.m31 * rhs.m13,
             lhs.m12 * rhs.m11 + lhs.m22 * rhs.m12 + lhs.m32 * rhs.m13,
@@ -139,15 +139,15 @@ public extension Matrix3x3 {
         )
     }
     
-    public static func * (lhs: Matrix3x3, rhs: Vector2) -> Vector2 {
+    public static func *(lhs: Matrix3x3, rhs: Vector2) -> Vector2 {
         return rhs * lhs
     }
     
-    public static func * (lhs: Matrix3x3, rhs: Vector3) -> Vector3 {
+    public static func *(lhs: Matrix3x3, rhs: Vector3) -> Vector3 {
         return rhs * lhs
     }
     
-    public static func * (lhs: Matrix3x3, rhs: Scalar) -> Matrix3x3 {
+    public static func *(lhs: Matrix3x3, rhs: Scalar) -> Matrix3x3 {
         return Matrix3x3(
             lhs.m11 * rhs, lhs.m12 * rhs, lhs.m13 * rhs,
             lhs.m21 * rhs, lhs.m22 * rhs, lhs.m23 * rhs,
@@ -155,7 +155,7 @@ public extension Matrix3x3 {
         )
     }
     
-    public static func == (lhs: Matrix3x3, rhs: Matrix3x3) -> Bool {
+    public static func ==(lhs: Matrix3x3, rhs: Matrix3x3) -> Bool {
         if !lhs.m11.isEqual(to: rhs.m11) { return false }
         if !lhs.m12.isEqual(to: rhs.m12) { return false }
         if !lhs.m13.isEqual(to: rhs.m13) { return false }
@@ -168,7 +168,7 @@ public extension Matrix3x3 {
         return true
     }
     
-    public static func != (lhs: Matrix3x3, rhs: Matrix3x3) -> Bool {
+    public static func !=(lhs: Matrix3x3, rhs: Matrix3x3) -> Bool {
         if lhs.m11.isEqual(to: rhs.m11) { return false }
         if lhs.m12.isEqual(to: rhs.m12) { return false }
         if lhs.m13.isEqual(to: rhs.m13) { return false }

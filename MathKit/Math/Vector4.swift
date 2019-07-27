@@ -122,27 +122,27 @@ public extension Vector4 {
         return self + (v - self) * t
     }
     
-    public static func + (lhs: Vector4, rhs: Vector4) -> Vector4 {
+    public static func +(lhs: Vector4, rhs: Vector4) -> Vector4 {
         return Vector4(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z, lhs.w + rhs.w)
     }
     
-    public static func - (lhs: Vector4, rhs: Vector4) -> Vector4 {
+    public static func -(lhs: Vector4, rhs: Vector4) -> Vector4 {
         return Vector4(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z, lhs.w - rhs.w)
     }
     
-    public static prefix func - (v: Vector4) -> Vector4 {
+    public static prefix func -(v: Vector4) -> Vector4 {
         return Vector4(-v.x, -v.y, -v.z, -v.w)
     }
     
-    public static func * (lhs: Vector4, rhs: Vector4) -> Vector4 {
+    public static func *(lhs: Vector4, rhs: Vector4) -> Vector4 {
         return Vector4(lhs.x * rhs.x, lhs.y * rhs.y, lhs.z * rhs.z, lhs.w * rhs.w)
     }
     
-    public static func * (lhs: Vector4, rhs: Scalar) -> Vector4 {
+    public static func *(lhs: Vector4, rhs: Scalar) -> Vector4 {
         return Vector4(lhs.x * rhs, lhs.y * rhs, lhs.z * rhs, lhs.w * rhs)
     }
     
-    public static func * (lhs: Vector4, rhs: Matrix4x4) -> Vector4 {
+    public static func *(lhs: Vector4, rhs: Matrix4x4) -> Vector4 {
         return Vector4(
             lhs.x * rhs.m11 + lhs.y * rhs.m21 + lhs.z * rhs.m31 + lhs.w * rhs.m41,
             lhs.x * rhs.m12 + lhs.y * rhs.m22 + lhs.z * rhs.m32 + lhs.w * rhs.m42,
@@ -151,19 +151,19 @@ public extension Vector4 {
         )
     }
     
-    public static func / (lhs: Vector4, rhs: Vector4) -> Vector4 {
+    public static func /(lhs: Vector4, rhs: Vector4) -> Vector4 {
         return Vector4(lhs.x / rhs.x, lhs.y / rhs.y, lhs.z / rhs.z, lhs.w / rhs.w)
     }
     
-    public static func / (lhs: Vector4, rhs: Scalar) -> Vector4 {
+    public static func /(lhs: Vector4, rhs: Scalar) -> Vector4 {
         return Vector4(lhs.x / rhs, lhs.y / rhs, lhs.z / rhs, lhs.w / rhs)
     }
     
-    public static func == (lhs: Vector4, rhs: Vector4) -> Bool {
+    public static func ==(lhs: Vector4, rhs: Vector4) -> Bool {
         return lhs.x.isEqual(to: rhs.x) && lhs.y.isEqual(to: rhs.y) && lhs.z.isEqual(to: rhs.z) && lhs.w.isEqual(to: rhs.w)
     }
     
-    public static func != (lhs: Vector4, rhs: Vector4) -> Bool {
+    public static func !=(lhs: Vector4, rhs: Vector4) -> Bool {
         return !lhs.x.isEqual(to: rhs.x) && !lhs.y.isEqual(to: rhs.y) && !lhs.z.isEqual(to: rhs.z) && !lhs.w.isEqual(to: rhs.w)
     }
 }

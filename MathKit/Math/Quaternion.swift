@@ -149,19 +149,19 @@ public extension Quaternion {
         return t1 + t2
     }
     
-    public static func + (lhs: Quaternion, rhs: Quaternion) -> Quaternion {
+    public static func +(lhs: Quaternion, rhs: Quaternion) -> Quaternion {
         return Quaternion(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z, lhs.w + rhs.w)
     }
     
-    public static func - (lhs: Quaternion, rhs: Quaternion) -> Quaternion {
+    public static func -(lhs: Quaternion, rhs: Quaternion) -> Quaternion {
         return Quaternion(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z, lhs.w - rhs.w)
     }
     
-    public static prefix func - (q: Quaternion) -> Quaternion {
+    public static prefix func -(q: Quaternion) -> Quaternion {
         return Quaternion(-q.x, -q.y, -q.z, q.w)
     }
     
-    public static func * (lhs: Quaternion, rhs: Quaternion) -> Quaternion {
+    public static func *(lhs: Quaternion, rhs: Quaternion) -> Quaternion {
         return Quaternion(
             lhs.w * rhs.x + lhs.x * rhs.w + lhs.y * rhs.z - lhs.z * rhs.y,
             lhs.w * rhs.y + lhs.y * rhs.w + lhs.z * rhs.x - lhs.x * rhs.z,
@@ -170,23 +170,23 @@ public extension Quaternion {
         )
     }
     
-    public static func * (lhs: Quaternion, rhs: Vector3) -> Vector3 {
+    public static func *(lhs: Quaternion, rhs: Vector3) -> Vector3 {
         return rhs * lhs
     }
     
-    public static func * (lhs: Quaternion, rhs: Scalar) -> Quaternion {
+    public static func *(lhs: Quaternion, rhs: Scalar) -> Quaternion {
         return Quaternion(lhs.x * rhs, lhs.y * rhs, lhs.z * rhs, lhs.w * rhs)
     }
     
-    public static func / (lhs: Quaternion, rhs: Scalar) -> Quaternion {
+    public static func /(lhs: Quaternion, rhs: Scalar) -> Quaternion {
         return Quaternion(lhs.x / rhs, lhs.y / rhs, lhs.z / rhs, lhs.w / rhs)
     }
     
-    public static func == (lhs: Quaternion, rhs: Quaternion) -> Bool {
+    public static func ==(lhs: Quaternion, rhs: Quaternion) -> Bool {
         return lhs.x.isEqual(to: rhs.x) && lhs.y.isEqual(to: rhs.y) && lhs.z.isEqual(to: rhs.z) && lhs.w.isEqual(to: rhs.w)
     }
     
-    public static func != (lhs: Quaternion, rhs: Quaternion) -> Bool {
+    public static func !=(lhs: Quaternion, rhs: Quaternion) -> Bool {
         return !lhs.x.isEqual(to: rhs.x) && !lhs.y.isEqual(to: rhs.y) && !lhs.z.isEqual(to: rhs.z) && !lhs.w.isEqual(to: rhs.w)
     }
 }

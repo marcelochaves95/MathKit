@@ -92,46 +92,46 @@ public extension Vector2 {
         return self + (v - self) * t
     }
     
-    public static func + (lhs: Vector2, rhs: Vector2) -> Vector2 {
+    public static func +(lhs: Vector2, rhs: Vector2) -> Vector2 {
         return Vector2(lhs.x + rhs.x, lhs.y + rhs.y)
     }
     
-    public static func - (lhs: Vector2, rhs: Vector2) -> Vector2 {
+    public static func -(lhs: Vector2, rhs: Vector2) -> Vector2 {
         return Vector2(lhs.x - rhs.x, lhs.y - rhs.y)
     }
     
-    public static prefix func - (v: Vector2) -> Vector2 {
+    public static prefix func -(v: Vector2) -> Vector2 {
         return Vector2(-v.x, -v.y)
     }
     
-    public static func * (lhs: Vector2, rhs: Vector2) -> Vector2 {
+    public static func *(lhs: Vector2, rhs: Vector2) -> Vector2 {
         return Vector2(lhs.x * rhs.x, lhs.y * rhs.y)
     }
     
-    public static func * (lhs: Vector2, rhs: Scalar) -> Vector2 {
+    public static func *(lhs: Vector2, rhs: Scalar) -> Vector2 {
         return Vector2(lhs.x * rhs, lhs.y * rhs)
     }
     
-    public static func * (lhs: Vector2, rhs: Matrix3x3) -> Vector2 {
+    public static func *(lhs: Vector2, rhs: Matrix3x3) -> Vector2 {
         return Vector2(
             lhs.x * rhs.m11 + lhs.y * rhs.m21 + rhs.m31,
             lhs.x * rhs.m12 + lhs.y * rhs.m22 + rhs.m32
         )
     }
     
-    public static func / (lhs: Vector2, rhs: Vector2) -> Vector2 {
+    public static func /(lhs: Vector2, rhs: Vector2) -> Vector2 {
         return Vector2(lhs.x / rhs.x, lhs.y / rhs.y)
     }
     
-    public static func / (lhs: Vector2, rhs: Scalar) -> Vector2 {
+    public static func /(lhs: Vector2, rhs: Scalar) -> Vector2 {
         return Vector2(lhs.x / rhs, lhs.y / rhs)
     }
     
-    public static func == (lhs: Vector2, rhs: Vector2) -> Bool {
+    public static func ==(lhs: Vector2, rhs: Vector2) -> Bool {
         return lhs.x.isEqual(to: lhs.x) && lhs.y.isEqual(to: rhs.y)
     }
     
-    public static func != (lhs: Vector2, rhs: Vector2) -> Bool {
+    public static func !=(lhs: Vector2, rhs: Vector2) -> Bool {
         return !lhs.x.isEqual(to: rhs.x) && !lhs.y.isEqual(to: rhs.y)
     }
 }

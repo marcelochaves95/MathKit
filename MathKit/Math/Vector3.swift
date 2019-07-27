@@ -101,27 +101,27 @@ public extension Vector3 {
         return self + (v - self) * t
     }
     
-    public static func + (lhs: Vector3, rhs: Vector3) -> Vector3 {
+    public static func +(lhs: Vector3, rhs: Vector3) -> Vector3 {
         return Vector3(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z)
     }
     
-    public static func - (lhs: Vector3, rhs: Vector3) -> Vector3 {
+    public static func -(lhs: Vector3, rhs: Vector3) -> Vector3 {
         return Vector3(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z)
     }
     
-    public static prefix func - (v: Vector3) -> Vector3 {
+    public static prefix func -(v: Vector3) -> Vector3 {
         return Vector3(-v.x, -v.y, -v.z)
     }
     
-    public static func * (lhs: Vector3, rhs: Vector3) -> Vector3 {
+    public static func *(lhs: Vector3, rhs: Vector3) -> Vector3 {
         return Vector3(lhs.x * rhs.x, lhs.y * rhs.y, lhs.z * rhs.z)
     }
     
-    public static func * (lhs: Vector3, rhs: Scalar) -> Vector3 {
+    public static func *(lhs: Vector3, rhs: Scalar) -> Vector3 {
         return Vector3(lhs.x * rhs, lhs.y * rhs, lhs.z * rhs)
     }
     
-    public static func * (lhs: Vector3, rhs: Matrix3x3) -> Vector3 {
+    public static func *(lhs: Vector3, rhs: Matrix3x3) -> Vector3 {
         return Vector3(
             lhs.x * rhs.m11 + lhs.y * rhs.m21 + lhs.z * rhs.m31,
             lhs.x * rhs.m12 + lhs.y * rhs.m22 + lhs.z * rhs.m32,
@@ -129,7 +129,7 @@ public extension Vector3 {
         )
     }
     
-    public static func * (lhs: Vector3, rhs: Matrix4x4) -> Vector3 {
+    public static func *(lhs: Vector3, rhs: Matrix4x4) -> Vector3 {
         return Vector3(
             lhs.x * rhs.m11 + lhs.y * rhs.m21 + lhs.z * rhs.m31 + rhs.m41,
             lhs.x * rhs.m12 + lhs.y * rhs.m22 + lhs.z * rhs.m32 + rhs.m42,
@@ -137,26 +137,26 @@ public extension Vector3 {
         )
     }
     
-    public static func * (v: Vector3, q: Quaternion) -> Vector3 {
+    public static func *(v: Vector3, q: Quaternion) -> Vector3 {
         let qv = q.xyz
         let uv = qv.cross(v)
         let uuv = qv.cross(uv)
         return v + (uv * 2 * q.w) + (uuv * 2)
     }
     
-    public static func / (lhs: Vector3, rhs: Vector3) -> Vector3 {
+    public static func /(lhs: Vector3, rhs: Vector3) -> Vector3 {
         return Vector3(lhs.x / rhs.x, lhs.y / rhs.y, lhs.z / rhs.z)
     }
     
-    public static func / (lhs: Vector3, rhs: Scalar) -> Vector3 {
+    public static func /(lhs: Vector3, rhs: Scalar) -> Vector3 {
         return Vector3(lhs.x / rhs, lhs.y / rhs, lhs.z / rhs)
     }
     
-    public static func == (lhs: Vector3, rhs: Vector3) -> Bool {
+    public static func ==(lhs: Vector3, rhs: Vector3) -> Bool {
         return lhs.x.isEqual(to: rhs.x) && lhs.y.isEqual(to: rhs.y) && lhs.z.isEqual(to: rhs.z)
     }
     
-    public static func != (lhs: Vector3, rhs: Vector3) -> Bool {
+    public static func !=(lhs: Vector3, rhs: Vector3) -> Bool {
         return !lhs.x.isEqual(to: rhs.x) && !lhs.y.isEqual(to: rhs.y) && !lhs.z.isEqual(to: rhs.z)
     }
 }
