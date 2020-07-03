@@ -10,7 +10,8 @@ MathKit is a completely standalone library, relying only on the Foundation frame
 
 MathKit is designed to be efficient, but has not been heavily optimized yet, and does not yet take advantage of architecture-specific hardware acceleration using the Accelerate framework.
 
-## Implementations
+## Implemented:
+#### Math
 - - [x] Matrix3x3
 - - [x] Matrix4x4
 - - [x] Quaternion
@@ -18,10 +19,8 @@ MathKit is designed to be efficient, but has not been heavily optimized yet, and
 - - [x] Vector2
 - - [x] Vector3
 - - [x] Vector4
+
+#### Extension
 - - [x] MapKit
 - - [x] Quartz
 - - [x] SceneKit
-- - [ ] Unit Tests
-
-## License
-MIT license. See the [`LICENSE`](LICENSE) file for details.
